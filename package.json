@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.24.5",
+    "overlayscrollbars": "^2.11.1",
+    "overlayscrollbars-react": "^0.5.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
@@ -31,7 +34,8 @@
     "vite-plugin-pages": "^0.32.5"
   },
   "pnpm": {
-    "ignoredBuiltDependencies": [
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
       "esbuild"
     ]
   }

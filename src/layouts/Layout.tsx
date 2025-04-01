@@ -1,8 +1,14 @@
 import { Outlet, useLocation } from "react-router-dom"
-import {} from "@/components/"
-
+import { AuthGuard } from "@/components/auth-guard"
+import { DefaultLayout } from "@/layouts"
 export default function Layout() {
-	const location = useLocation()
+	// const location = useLocation()
 
-	return <div>Layout</div>
+	return (
+		<AuthGuard>
+			<DefaultLayout>
+				<Outlet />
+			</DefaultLayout>
+		</AuthGuard>
+	)
 }
