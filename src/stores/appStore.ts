@@ -5,7 +5,7 @@ interface AppStore {
 	// layout
 	headerHeight: number
 	sidebarWidth: number
-	sidebarCollapsedWwidth: number
+	sidebarCollapsedWidth: number
 	sidebarCollapsed: boolean
 	toggleSidebarCollapsed: () => void
 
@@ -35,7 +35,7 @@ export const useAppStore = create<AppStore>()(
 			// layout
 			headerHeight: 64,
 			sidebarWidth: 240,
-			sidebarCollapsedWwidth: 64,
+			sidebarCollapsedWidth: 64,
 			sidebarCollapsed: false,
 			toggleSidebarCollapsed: () =>
 				set((state) => ({ sidebarCollapsed: !state.sidebarCollapsed })),

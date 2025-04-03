@@ -2,7 +2,7 @@ import type { CSSProperties } from "react"
 import { Layout } from "antd"
 import { useShallow } from "zustand/react/shallow"
 import { useAppStore } from "@/stores/appStore"
-
+import { ThemeToggle } from "@/components/common"
 import { SiderToggle, BreadcrumbNav } from "./components"
 const { Header: AntdHeader } = Layout
 export default function Header() {
@@ -38,7 +38,9 @@ export default function Header() {
 					<SiderToggle />
 					<BreadcrumbNav />
 				</div>
-				<div className="flex items-center justify-end"></div>
+				<div className="flex items-center justify-end">
+					<ThemeToggle />
+				</div>
 			</div>
 		</AntdHeader>
 	)

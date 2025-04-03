@@ -34,4 +34,4 @@ export const TransitionProvider = ({ children }: { children: ReactNode }) => {
 	)
 }
 
-export const useTransitionContext = () => use(TransitionContext)
+export const useTransitionControl = () => use(TransitionContext)

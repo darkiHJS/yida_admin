@@ -1,3 +1,3 @@
 export default function Page() {
-	return <div>index</div>
+	return <div className="h-screen">index</div>
 }
