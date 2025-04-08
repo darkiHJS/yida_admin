@@ -1,6 +1,25 @@
 import { defineConfig, presetWind3 } from "unocss"
 
 export default defineConfig({
+	rules: [
+		// 登录背景
+		[
+			"bg-login",
+			{
+				background:
+					"linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%)",
+			},
+		],
+		[
+			"bg-login-dark",
+			{
+				background:
+					"linear-gradient(60deg, rgba(54, 38, 123, 1) 0%, rgba(0, 112, 123, 1) 100%)",
+			},
+		],
+		[/^align-\[([+-]?\d.+)\]$/, ([_, num]) => ({ "vertical-align": num })],
+		["text-optimizeLegibility", { "text-rendering": "optimizeLegibility" }],
+	],
 	shortcuts: {
 		// 主题
 		"text-theme": "text-dark-800",
