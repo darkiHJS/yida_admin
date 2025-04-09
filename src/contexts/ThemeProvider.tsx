@@ -2,7 +2,7 @@ import { useEffect, type ReactNode } from "react"
 import { ConfigProvider, theme } from "antd"
 import { useAppStore } from "@/stores/appStore"
 import { useShallow } from "zustand/react/shallow"
-const ThemeProvider = ({ children }: { children: ReactNode }) => {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const { isDark } = useAppStore(
 		useShallow((state) => ({
 			isDark: state.isDark,
@@ -21,6 +21,7 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
 			useAppStore.getState().setTheme(e.matches)
 		}
 		mediaQuery.addEventListener("change", handleChange)
+
 		return () => {
 			mediaQuery.removeEventListener("change", handleChange)
 		}
@@ -35,5 +36,3 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
 		</ConfigProvider>
 	)
 }
-
-export default ThemeProvider
